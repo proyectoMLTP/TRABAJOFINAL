@@ -4,17 +4,22 @@ TRABAJOFINAL
 
 CURSO: Programación Multiplataforma
 
-PROFESOR: CHAVEZ ESPINOZA, JONATHAN JORGE BLOQUE: FC-PREINF04B1T TEMA: Reducir la tasa de animales domésticos que no cuentan con un hogar
+PROFESOR: CHAVEZ ESPINOZA, JONATHAN JORGE 
 
-Integrantes: CODIGO
+BLOQUE: FC-PREINF04B1T 
 
-Elvinn Kemmis Vasquez Chavez 1720883
+TEMA: Reducir la tasa de animales domésticos que no cuentan con un hogar
 
-Jorge Edison Ceron Ruiz	1720907
+Integrantes:                     CODIGO
+
+Elvinn Kemmis Vasquez Chavez     1720883
+
+Jorge Edison Ceron Ruiz	         1720907
 
 Karina Antuanett Zambrano Toledo 1811115
 
             2019
+
 //2.Nombre del producto: Mencionar un nombre propio que identifique al producto. 
 
 NOMBRE DEL PRODUCTO: PETBienestar
