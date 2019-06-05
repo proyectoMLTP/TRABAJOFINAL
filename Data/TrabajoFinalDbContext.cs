@@ -1,15 +1,18 @@
 
+using Microsoft.EntityFrameworkCore;
+using TRABAJOFINAL.Models;
+
 namespace TRABAJOFINAL.Data
 {
     public class TrabajoFinalDbContext : DbContext
     {
-       public DbSet<Usuarios> Usuarios  {get; set} 
-       public DbSet<CategoriaUsuarios> CategoriaUsuarios { get; set; }
+       
         
-        public DbSet<Mascotas> Mascotas { get; set; }
+        public DbSet<Mascota> Mascota { get; set; }
         public DbSet<CategoriaMasc> CategoriaMasc { get; set; }
 
-        public TrabajoFinalMultiplataformaDbContext(DbContextOptions<TrabajoFinalDbContext> o) : base(o) {
+
+        public TrabajoFinalDbContext(DbContextOptions<TrabajoFinalDbContext> o) : base(o) {
 
         }
     }

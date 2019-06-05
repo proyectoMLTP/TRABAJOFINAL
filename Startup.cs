@@ -6,9 +6,12 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using TRABAJOFINAL.Data;
 
 namespace TRABAJOFINAL
 {
@@ -31,11 +34,11 @@ namespace TRABAJOFINAL
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<TrabajoFinal>(
+            services.AddDbContext<TrabajoFinalDbContext>(
                 o => o.UseMySql(Configuration.GetConnectionString("Default"))
             );
-            
-            services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<TrabajoFinal>();
+
+            services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<TrabajoFinalDbContext>();
 
 
             
