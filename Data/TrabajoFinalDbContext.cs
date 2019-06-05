@@ -9,7 +9,7 @@ namespace TRABAJOFINAL.Data
        
         
         public DbSet<Mascota> Mascota { get; set; }
-        public DbSet<CategoriaMasc> CategoriaMasc { get; set; }
+        
 
 
         public TrabajoFinalDbContext(DbContextOptions<TrabajoFinalDbContext> o) : base(o) {
