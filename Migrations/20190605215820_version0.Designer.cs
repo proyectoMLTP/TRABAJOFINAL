@@ -9,8 +9,8 @@ using TRABAJOFINAL.Data;
 namespace TRABAJOFINAL.Migrations
 {
     [DbContext(typeof(TrabajoFinalDbContext))]
-    [Migration("20190605215630_versio5")]
-    partial class versio5
+    [Migration("20190605215820_version0")]
+    partial class version0
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
