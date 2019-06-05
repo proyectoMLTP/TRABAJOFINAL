@@ -18,18 +18,19 @@ namespace TRABAJOFINAL.Controllers
         {
             return View();
         }
-        public IActionResult Unetenos()
+
+        public IActionResult Alertas()
         {
-            return View();
+          //TODO: Implement Realistic Implementation
+          return View();
         }
-         public IActionResult IniciarSesion()
+
+        public IActionResult Sugerencias()
         {
-            return View();
+          //TODO: Implement Realistic Implementation
+          return View();
         }
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
