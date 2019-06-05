@@ -8,5 +8,9 @@ namespace TRABAJOFINAL.Data
         
         public DbSet<Mascotas> Mascotas { get; set; }
         public DbSet<CategoriaMasc> CategoriaMasc { get; set; }
+
+        public TrabajoFinalMultiplataformaDbContext(DbContextOptions<TrabajoFinalDbContext> o) : base(o) {
+
+        }
     }
 }
