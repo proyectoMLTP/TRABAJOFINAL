@@ -34,7 +34,10 @@ namespace TRABAJOFINAL
             services.AddDbContext<TrabajoFinal>(
                 o => o.UseMySql(Configuration.GetConnectionString("Default"))
             );
+            
             services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<TrabajoFinal>();
+
+
             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

@@ -22,6 +22,10 @@ namespace TRABAJOFINAL.Controllers
         {
             return View();
         }
+         public IActionResult IniciarSesion()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
