@@ -8,7 +8,14 @@ namespace TRABAJOFINAL.Data
     {
        
         
-        public DbSet<Mascota> Mascota { get; set; }
+        public DbSet<Mascota> Mascota { get; set; } 
+        public DbSet<Usuario> Usuario {get; set;}
+
+        public DbSet<Donaciones> Donaciones{get; set;}
+
+        public DbSet<Tipo> Tipo{get; set;}
+        
+
         
 
 
