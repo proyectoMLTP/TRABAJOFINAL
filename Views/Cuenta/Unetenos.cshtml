@@ -1,0 +1,36 @@
+@model RegistroViewModel
+@{
+    ViewData["Title"] = "Unetenos";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+</head>
+<body>
+    <h1>@ViewData["Title"]</h1>
+
+    <form asp-action="Unetenos">
+        <div>
+            <label>Nombre de usuario: </label>
+            <input type="text" asp-for="Usuario">
+        </div>
+        <div>
+            <label for="">Correo: </label>
+            <input type="email" asp-for="Email">
+        </div>
+        <div>
+            <label for="">Contraseña: </label>
+            <input type="password" asp-for="Password">
+        </div>
+        <div>
+            <button>Unirse</button>
+        </div>
+
+    </form>
+</body>
+</html>
