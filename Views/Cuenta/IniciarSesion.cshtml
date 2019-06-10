@@ -1,0 +1,34 @@
+@model LoginViewModel
+@{
+    @ViewData["Title"]
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+</head>
+<body>
+    
+    <div>
+        <h1>POR FAVOR INGRESE SUS DATOS</h1>
+
+        <form asp-action="IniciarSesion" method="post">
+
+            <div>
+                <label for="">INGRESE SU CORREO ELECTRONICO: </label>
+                <br>
+                <input asp-for = "Email">
+            </div>
+           <div>
+                <label for="">INGRESE SU CONTRASEÑA: </label> 
+                <br> 
+                <input asp-for = "Password">
+           </div>
+           <button>INGRESAR</button>
+        </form>
+    </div>
+</body>
+</html>
