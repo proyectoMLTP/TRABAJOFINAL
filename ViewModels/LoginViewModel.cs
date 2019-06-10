@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TRABAJOFINAL.ViewModels
 {
-    public class LoginModel
+    public class LoginViewModel
     {
         [Required]
         public string Usuario { get; set; }   

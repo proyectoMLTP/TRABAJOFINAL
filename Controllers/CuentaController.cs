@@ -50,13 +50,34 @@ namespace TRABAJOFINAL.Controllers
 
          public IActionResult IniciarSesion()
         {
+            
             return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult IniciarSesion(LoginViewModel lv)
+        {
+            if(ModelState.IsValid){
+                
+
+                var resultado = _signInManager.PasswordSignInAsync(lv.Usuario, lv.Password, false, false);
+
+                if(resultado.Result.Succeeded){
+                    return RedirectToAction("Index", "home");
+                }else{
+                    
+                        ModelState.AddModelError("", "Error en contraseña o usuario");
+                    
+                }
+            }
+            return View(lv);
         }
 
         public IActionResult CerrarSesion()
         {
-          //TODO: Implement Realistic Implementation
-          return View();
+          _signInManager.SignOutAsync();
+          return RedirectToAction("Index", "home");
         }
     }
 }
