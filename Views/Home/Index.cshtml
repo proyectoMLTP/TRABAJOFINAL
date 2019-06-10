@@ -1,8 +1,39 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="http://www.mascotas.cr/wp-content/uploads/2016/08/FotoNO.1adopcion.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="http://www.mascotas.cr/wp-content/uploads/2016/08/FotoNO.1adopcion.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="http://www.mascotas.cr/wp-content/uploads/2016/08/FotoNO.1adopcion.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
 </div>
+
+<div class="container center mt-5" style="background-image: url(https://previews.123rf.com/images/sn333g/sn333g1711/sn333g171100235/90571973-vector-perro-o-gato-pata-impresi%C3%B3n-de-patrones-sin-fisuras-o-textura.jpg)">
+    <div class="row">
+        <div class="col">
+        <button type="button" class="btn btn-info">ADOPCIÓN</button>
+        <img src="https://t1.ea.ltmcdn.com/es/images/4/9/5/donde_puedo_adoptar_un_perro_en_madrid_20594_600.jpg" alt="..." class="img-thumbnail">
+        </div>
+        <div class="col">
+        <button type="button" class="btn btn-info">ESTIRILIZACIÓN</button>
+        <img src="https://laopinionla.files.wordpress.com/2017/11/aspca-sur-south-los-angeles-esterilizacion-castracion-gratis-2.jpg" alt="..." class="img-thumbnail">
+        </div>
+        <div class="col">
+        <button type="button" class="btn btn-info">DA EN ADOPCIÓN</button>
+        </div>
+    </div>
+</div>
+
+
+
+$('.carousel').carousel({
+  interval: 500
+})
