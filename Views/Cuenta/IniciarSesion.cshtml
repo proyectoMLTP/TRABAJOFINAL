@@ -2,34 +2,35 @@
 @{
     @ViewData["Title"]
 }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-</head>
-<body>
-    
-    <div>
-        <h1>POR FAVOR INGRESE SUS DATOS</h1>
 
-        <form asp-action="IniciarSesion" method="post">
+<div class="container">
+    <img src="http://www.sclance.com/pngs/cartoon-dog-png/cartoon_dog_png_226068.png" width="1100">
+</div>
 
-            <div>
-                <label for="">INGRESE SU CORREO ELECTRONICO: </label>
-                <br>
-                <input asp-for = "Email">
-            </div><br>
-           <div>
-                <label for="">INGRESE SU CONTRASEÑA: </label> 
-                <br> 
-                <input asp-for = "Password">
-           </div><br>
-           <br>
-           <button>INGRESAR</button>
-        </form>
-    </div>
-</body>
-</html>
+<div class="container text-center" style="background-color: #87c0cd">
+
+    <h1>POR FAVOR INGRESE SUS DATOS</h1>
+        <div class="row">
+            <div class="col-6">
+                <form asp-action="IniciarSesion" method="post">
+
+                    <div class="form-group">
+                        <label for="">INGRESE SU CORREO ELECTRONICO: </label>
+                        <br>
+                        <input class="form-control" asp-for = "Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="">INGRESE SU CONTRASEÑA: </label> 
+                        <br> 
+                        <input class="form-control" asp-for = "Password">
+                    </div>
+                    <br>
+                    <button class="btn btn-primary">INGRESAR</button>
+                    <br>
+                </form>
+            </div>
+            <div class="col-6">
+                <img src="https://www.melopienso.com/wp-content/uploads/2017/09/dog-hello.png" width="200"> 
+            </div>
+        </div>
+</div>
