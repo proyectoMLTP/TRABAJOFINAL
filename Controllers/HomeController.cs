@@ -19,10 +19,18 @@ namespace TRABAJOFINAL.Controllers
             return View();
         }
 
+        public IActionResult ValidarForm()
+        {
+            return View();
+        }
         public IActionResult Alertas()
         {
           
           return View();
+        }
+        public IActionResult Formualrioalertas()
+        {
+            return View();
         }
 
         public IActionResult Sugerencias()

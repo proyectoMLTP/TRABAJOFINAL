@@ -8,16 +8,28 @@
 </head>
 <body>
     <h1>ALERTAS PETBIENESTAR</h1>
+    <br>
     <p>En este apartado usted podrá denunciar cualquier tipo de maltrato animal</p>
     <p>o darnos a conocer cualquier situación relacionada con las mascotas.</p>
+    <br>
     <div>
-        <h2>FORMULARIO: </h2>
-        <form action="" method="POST">
-            INGRESE SU NOMBRE: 
-
-        </form>
-        
+        <div>
+            <form asp-action="Formualrioalertas" method="GET">
+                <img src="" alt="">
+                <input type="hidden" name="id" value= "maltrato">
+                <br>
+                <button>MALTRATO</button>
+            </form>
+        </div>
+        <div>
+            <form action="Formualrioalertas" method="GET">
+                <img src="" alt="">
+                <input type="hidden" name="id" value= "abandono">
+                <br>
+                <button>ABANDONO</button>
+            </form>
+        </div>
     </div>
-    
+    <br>
 </body>
 </html>
