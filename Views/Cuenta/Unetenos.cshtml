@@ -3,48 +3,51 @@
     ViewData["Title"] = "Unetenos";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-</head>
-<body>
+
+<div class="container">
+    <img src="http://www.sclance.com/pngs/cartoon-dog-png/cartoon_dog_png_226068.png" width="1100">
+</div>
+
+<div class="container text-center" style="background-color: #f1d1b5">
     <h1>@ViewData["Title"]</h1>
+    <div class="row">
+        <div class="col-5">
+            <form asp-action="Unetenos">
+                <p>Por favor ingrese sus datos:</p>
+                <div class="form-group">
+                    <label>USUARIO: </label><br>
+                    <input class="form-control" type="text" asp-for="Usuario" placeholder="Ingrese nombre de usuario">
+                </div>
+                <div>
+                    <label for="">CORREO ELECTRONICO: </label><br>
+                    <input class="form-control" type="email" asp-for="Email" placeholder="Ingrese email">
+                </div><br>
 
-    <form asp-action="Unetenos">
-        <div>
-            <label>Nombre de usuario: </label><br>
-            <input type="text" asp-for="Usuario">
-        </div><br>
-        <div>
-            <label for="">Correo: </label><br>
-            <input type="email" asp-for="Email">
-        </div><br>
+                <div>
+                    <label for="">DIRECCIÓN: </label><br>
+                    <input class="form-control" type="text" asp-for="Email" placeholder="Ingrese dirección">
+                </div><br>
 
-        <div>
-            <label for="">Dirección: </label> 
-            <br>
-            <input type="text" asp-for="Email">
-        </div><br>
-
-        <div>
-            <label for="">Teléfono: </label><br>
-            <input type="text" asp-for="Email">
-        </div><br>
+                <div>
+                    <label for="">TELEFONO: </label><br>
+                    <input class="form-control" type="text" asp-for="Email" placeholder="Ingrese numero de telefono">
+                </div><br>
 
 
-        <div>
-            <label for="">Contraseña: </label><br>
-            <input type="password" asp-for="Password">
-        </div><br>
+                <div>
+                    <label for="">CONTRASEÑA: </label><br>
+                    <input class="form-control" type="password" asp-for="Password" placeholder="Ingrese contraseña">
+                </div><br>
 
-        <div>
-            <button>Unirse</button>
+                <div>
+                    <button class="btn btn-primary">UNIRSE</button>
+                </div><br>
+
+            </form>
         </div>
-
-    </form>
-</body>
-</html>
+        <div class="col-7">
+            <img src="https://images.vexels.com/media/users/3/144928/isolated/preview/ebbccaf76f41f7d83e45a42974cfcd87-ilustraci--n-de-perro-by-vexels.png" height="500">
+        </div>
+    </div>
+ 
+</div>
