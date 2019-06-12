@@ -28,7 +28,7 @@ namespace TRABAJOFINAL.Controllers
           
           return View();
         }
-        public IActionResult FormularioAlertas()
+        public IActionResult Formualrioalertas()
         {
             return View();
         }
