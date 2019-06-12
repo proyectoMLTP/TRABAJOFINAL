@@ -10,5 +10,6 @@ namespace TRABAJOFINAL.Models
         public string telefono { get; set; }
 
         public List<Donaciones> Donaciones { get; set; }
+        public List<Alerta> Alertas { get; set; }
     }
 }
