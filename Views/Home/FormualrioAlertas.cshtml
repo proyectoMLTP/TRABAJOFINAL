@@ -1,0 +1,42 @@
+@model Alerta
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+</head>
+<body>
+    <div>
+            <form asp-action="FormualrioAlertas" method="post">
+                    <div>
+                        <label>Nombre de usuario: </label><br>
+                        <input type="text" asp-for="nombre">
+                    </div><br>
+                    <div>
+                        <label for="">Telefono: </label><br>
+                        <input type="email" asp-for="telefono">
+                    </div><br>
+            
+                    <div>
+                        <label for="">Dirección donde està ocurriendo el hecho: </label> 
+                        <br>
+                        <input type="text" asp-for="direccion">
+                    </div><br>
+
+            
+                    <div>
+                        <label for="">Descripción:  </label><br>
+                        <textarea name="descripcion"  cols="30" rows="10"></textarea>
+                    </div><br>
+            
+                    <div>
+                        <button>ENVIAR ALERTA</button>
+                    </div>
+            
+                </form>
+    </div>
+</body>
+</html>
