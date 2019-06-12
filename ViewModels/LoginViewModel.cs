@@ -5,7 +5,7 @@ namespace TRABAJOFINAL.ViewModels
     public class LoginViewModel
     {
         [Required]
-        public string Usuario { get; set; }   
+        public string Email { get; set; }   
 
         [Required]
         [DataType(DataType.Password)]
