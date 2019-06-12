@@ -21,7 +21,7 @@ namespace TRABAJOFINAL.Controllers
 
         public IActionResult Alertas()
         {
-          //TODO: Implement Realistic Implementation
+          
           return View();
         }
 

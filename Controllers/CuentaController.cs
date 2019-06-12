@@ -61,7 +61,7 @@ namespace TRABAJOFINAL.Controllers
             if(ModelState.IsValid){
                 
 
-                var resultado = _signInManager.PasswordSignInAsync(lv.Usuario, lv.Password, false, false);
+                var resultado = _signInManager.PasswordSignInAsync(lv.Email, lv.Password, false, false);
 
                 if(resultado.Result.Succeeded){
                     return RedirectToAction("Index", "home");
