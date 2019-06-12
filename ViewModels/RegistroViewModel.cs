@@ -14,5 +14,11 @@ namespace TRABAJOFINAL.ViewModels
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+
+        [Required]
+        public string direccion { get; set; }
+        
+        [Required]
+        public string telefono { get; set; }
     }
 }
