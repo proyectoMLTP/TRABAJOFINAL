@@ -17,7 +17,7 @@
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body style="background-image: url(https://i.pinimg.com/originals/8a/d4/ba/8ad4ba24bb017a1e5a3216a9d17c8e2b.jpg)">
+<body style="background-image: url(http://www.wuf.pe/assets/img/bloq4.jpg">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -39,21 +39,19 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">INICIO</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Nosotros">NOSOTROS</a>
+                        </li> 
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Mascota" asp-action="Mascotas">MASCOTAS</a>
                         </li>
                          <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Alertas">ALERTAS</a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cuenta" asp-action="Unetenos">UNETENOS</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Sugerencias">SUGERENCIAS</a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Nosotros">NOSOTROS</a>
-
-                        </li> 
-                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Sugerencias">SUGERENCIAS</a>
-
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Cuenta" asp-action="Unetenos">UNETENOS</a>
                         </li>
                          <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Cuenta" asp-action="IniciarSesion">INGRESAR SESION</a>
@@ -66,12 +64,9 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <partial name="_CookieConsentPartial" />
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+
+    @RenderBody()
+
 
     <footer class="border-top footer text-muted">
         <div class="container">

@@ -1,42 +1,42 @@
 @model Alerta
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-</head>
-<body>
-    <div>
-            <form asp-action="FormualrioAlertas" method="post">
-                    <div>
-                        <label>Nombre de usuario: </label><br>
-                        <input type="text" asp-for="nombre">
-                    </div><br>
-                    <div>
-                        <label for="">Telefono: </label><br>
-                        <input type="email" asp-for="telefono">
-                    </div><br>
-            
-                    <div>
-                        <label for="">Dirección donde està ocurriendo el hecho: </label> 
-                        <br>
-                        <input type="text" asp-for="direccion">
-                    </div><br>
+<div class="container-fluid" style="background-image: url(http://www.wuf.pe/assets/img/bloq2.jpg)">
+    <div class="container mt-5">
+        <div class="text-center">
+            <h1>ALERTAS</h1>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <form asp-action="FormualrioAlertas" method="post">
+                    <p>Por favor ingresar los datos:</p>
+                    <div class="form-group">
+                        <label>USUARIO: </label><br>
+                        <input class="form-control" type="text" asp-for="nombre" placeholder="Ingrese nombre de usuario">
+                    </div>
 
-            
-                    <div>
-                        <label for="">Descripción:  </label><br>
-                        <textarea name="descripcion"  cols="30" rows="10"></textarea>
-                    </div><br>
-            
-                    <div>
-                        <button>ENVIAR ALERTA</button>
+                    <div class="form-group">
+                        <label for="">TELEFONO: </label><br>
+                        <input class="form-control" type="email" asp-for="telefono" placeholder="Ingrese número telefonico">
+                    </div>
+             
+                    <div class="form-group">
+                        <label for="">DIRECCIÓN:</label><br>
+                        <input class="form-control" type="text" asp-for="direccion" placeholder="Ingrese la dirección donde està ocurriendo el hecho">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">DESCRIPCIÓN:  </label><br>
+                        <textarea class="form-control" name="descripcion" rows="5"></textarea>
                     </div>
             
+                    <div class="text-center">
+                        <button class="btn btn-danger btn-lg">ENVIAR ALERTA</button>
+                    </div><br>
                 </form>
+            </div>
+            <div class="col-6 text-center">
+                    <img src="http://www.acupunturademascotas.com/wp-content/uploads/2018/02/perro_vet.png" width="450">   
+            </div>
+        </div>
     </div>
-</body>
-</html>
+</div>

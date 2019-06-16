@@ -8,46 +8,49 @@
     <img src="http://www.sclance.com/pngs/cartoon-dog-png/cartoon_dog_png_226068.png" width="1100">
 </div>
 
-<div class="container text-center" style="background-color: #f1d1b5">
-    <h1>@ViewData["Title"]</h1>
-    <div class="row">
-        <div class="col-5">
-            <form asp-action="Unetenos">
-                <p>Por favor ingrese sus datos:</p>
-                <div class="form-group">
-                    <label>USUARIO: </label><br>
-                    <input class="form-control" type="text" asp-for="Usuario" placeholder="Ingrese nombre de usuario">
-                </div>
-                <div>
-                    <label for="">CORREO ELECTRONICO: </label><br>
-                    <input class="form-control" type="email" asp-for="Email" placeholder="Ingrese email">
-                </div><br>
-
-                <div>
-                    <label for="">DIRECCIÓN: </label><br>
-                    <input class="form-control" type="text" asp-for="Email" placeholder="Ingrese dirección">
-                </div><br>
-
-                <div>
-                    <label for="">TELEFONO: </label><br>
-                    <input class="form-control" type="text" asp-for="Email" placeholder="Ingrese numero de telefono">
-                </div><br>
-
-
-                <div>
-                    <label for="">CONTRASEÑA: </label><br>
-                    <input class="form-control" type="password" asp-for="Password" placeholder="Ingrese contraseña">
-                </div><br>
-
-                <div>
-                    <button class="btn btn-primary">UNIRSE</button>
-                </div><br>
-
-            </form>
-        </div>
-        <div class="col-7">
-            <img src="https://images.vexels.com/media/users/3/144928/isolated/preview/ebbccaf76f41f7d83e45a42974cfcd87-ilustraci--n-de-perro-by-vexels.png" height="500">
-        </div>
+<div class="container-fluid" style="background-image: url(http://www.wuf.pe/assets/img/bloq3.jpg)">
+    <div class="text-center">
+        <br><img src="https://i.ibb.co/mvJP5dW/Unetenos.png"><br><br>
     </div>
- 
+    <div class="container ">    
+        <div class="row">
+            <div class="col-5">
+                <form asp-action="Unetenos">
+                    <p>Por favor ingrese sus datos:</p>
+                    <div class="form-group">
+                        <label>USUARIO: </label><br>
+                        <input class="form-control" type="text" asp-for="Usuario" placeholder="Ingrese nombre de usuario">
+                    </div>
+                    <div>
+                        <label for="">CORREO ELECTRONICO: </label><br>
+                        <input class="form-control" type="email" asp-for="Email" placeholder="Ingrese email">
+                    </div><br>
+
+                    <div>
+                        <label for="">DIRECCIÓN: </label><br>
+                        <input class="form-control" type="text" asp-for="Email" placeholder="Ingrese dirección">
+                    </div><br>
+
+                    <div>
+                        <label for="">TELEFONO: </label><br>
+                        <input class="form-control" type="text" asp-for="Email" placeholder="Ingrese numero de telefono">
+                    </div><br>
+
+
+                    <div>
+                        <label for="">CONTRASEÑA: </label><br>
+                        <input class="form-control" type="password" asp-for="Password" placeholder="Ingrese contraseña">
+                    </div><br>
+
+                    <div class="text-center">
+                        <button class="btn btn-success btn-lg" >UNIRSE</button>
+                    </div><br>
+
+                </form>
+            </div>
+            <div class="col-7 text-center">
+                <img src="https://images.vexels.com/media/users/3/144928/isolated/preview/ebbccaf76f41f7d83e45a42974cfcd87-ilustraci--n-de-perro-by-vexels.png" height="600">
+            </div>
+        </div>
+    </div>   
 </div>

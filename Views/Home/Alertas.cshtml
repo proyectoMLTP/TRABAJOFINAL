@@ -1,35 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-</head>
-<body>
-    <h1>ALERTAS PETBIENESTAR</h1>
-    <br>
-    <p>En este apartado usted podrá denunciar cualquier tipo de maltrato animal</p>
-    <p>o darnos a conocer cualquier situación relacionada con las mascotas.</p>
-    <br>
-    <div>
-        <div>
-            <form asp-action="Formualrioalertas" method="GET">
-                <img src="" alt="">
-                <input type="hidden" name="id" value= "maltrato">
-                <br>
-                <button>DENUNCIAR MALTRATO</button>
-            </form>
-        </div>
-        <div>
-            <form asp-action="Formualrioalertas" method="GET">
-                <img src="" alt="">
-                <input type="hidden" name="id" value= "abandono">
-                <br>
-                <button>REPORTAR ABANDONO</button>
-            </form>
+<div class="container-fluid text-center" style="background-image: url(http://www.wuf.pe/assets/img/bloq3.jpg)"> 
+    <br><img src="https://i.ibb.co/qnGs1Sp/Alertas-PETBienestar.png">
+    <br><br>
+    <div class="container text-center">
+    <h4>En este apartado usted podrá denunciar cualquier tipo de maltrato animal o darnos a conocer cualquier situación relacionada con las mascotas.</h4><br>
+        <div class="row">
+            <div class="col-6">
+                <form asp-action="Formualrioalertas" method="GET">                    
+                    <button class="btn btn-danger btn-lg">DENUNCIAR MALTRATO</button><br><br>
+                    <img src="https://e.an.amtv.pe/util-e-interesante-como-denunciar-maltrato-animal-peru-n325121-610x343-502090.jpg" class="img-thumbnail" height="450">
+                    <br>
+                    <input type="hidden" name="id" value= "maltrato">
+                    <br>
+                </form>
+            </div>
+            <div class="col-6">
+                <form asp-action="Formualrioalertas" method="GET">
+                    <button class="btn btn-danger btn-lg">REPORTAR ABANDONO</button><br><br>
+                    <img src="https://admin.srperro.com/media/post/6938ef6f-3609-45e4-bf54-80b1bd4307dc.png" class="img-thumbnail" height="450">
+                    <br>
+                    <input type="hidden" name="id" value= "abandono">
+                    <br>
+                </form>
+            </div>
         </div>
     </div>
     <br>
-</body>
-</html>
+</div>
