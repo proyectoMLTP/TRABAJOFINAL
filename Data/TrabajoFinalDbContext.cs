@@ -17,7 +17,7 @@ namespace TRABAJOFINAL.Data
         public DbSet<Tipo> Tipo{get; set;}
 
 
-        
+        public DbSet<Alerta> Alertas{get; set;}
 
 
         public TrabajoFinalDbContext(DbContextOptions<TrabajoFinalDbContext> o) : base(o) {
