@@ -28,10 +28,12 @@ namespace TRABAJOFINAL.Controllers
           
           return View();
         }
-        public IActionResult Formualrioalertas()
+        public IActionResult Formualrioalertas(string id)
         {
+            ViewBag.id=id;
             return View();
         }
+        
 
         public IActionResult Sugerencias()
         {
