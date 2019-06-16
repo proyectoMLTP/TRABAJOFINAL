@@ -33,7 +33,7 @@ namespace TRABAJOFINAL.Controllers
                 var user = new IdentityUser();
                 user.UserName=vm.Usuario;
                 user.Email=vm.Email;
-
+                
                 var resultado = _userManager.CreateAsync(user, vm.Password);
 
                 if(resultado.Result==IdentityResult.Success){
