@@ -1,4 +1,8 @@
 @model Alerta
+@{
+    ViewData["Title"]="Alertas";
+    
+}
 
 <div class="container-fluid" style="background-image: url(http://www.wuf.pe/assets/img/bloq2.jpg)">
     <div class="container mt-5">
@@ -10,13 +14,13 @@
                 <form asp-action="FormualrioAlertas" method="post">
                     <p>Por favor ingresar los datos:</p>
                     <div class="form-group">
-                        <label>USUARIO: </label><br>
+                        <label>Nombre: </label><br>
                         <input class="form-control" type="text" asp-for="nombre" placeholder="Ingrese nombre de usuario">
                     </div>
 
                     <div class="form-group">
                         <label for="">TELEFONO: </label><br>
-                        <input class="form-control" type="email" asp-for="telefono" placeholder="Ingrese número telefonico">
+                        <input class="form-control" type="text" asp-for="telefono" placeholder="Ingrese número telefonico">
                     </div>
              
                     <div class="form-group">
@@ -26,7 +30,11 @@
 
                     <div class="form-group">
                         <label for="">DESCRIPCIÓN:  </label><br>
-                        <textarea class="form-control" name="descripcion" rows="5"></textarea>
+                        <textarea class="form-control" asp-for="descripcion" rows="5"></textarea>
+                    </div>
+
+                    <div>
+                        <input type="hidden" asp-for="tipo" value=@ViewBag.id>
                     </div>
             
                     <div class="text-center">
