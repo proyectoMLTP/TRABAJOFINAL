@@ -1,3 +1,33 @@
 @{
     ViewData["Title"]="Dar en adopción";
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+</head>
+<body>
+    <h1>BIENVENIDO AL APARTADO DE DAR EN ADOPCION</h1>
+    <p>Por Favor llene correctemnte el fomulario.</p>
+    <div>
+        <form asp-action="DarAdopcion" method="POST">
+            <h2>DATOS DE LA MASCOTA</h2>
+            <div>
+                <label >EDAD DE LA MASCOTA: </label>
+                <br>
+                <input type="text" name="edad" >
+            </div>
+            <div>
+                <label >FOTO </label>
+                <br>
+                <input type="file" name="foto">
+            </div>
+            
+            <button>Dar en adopcion</button>
+        </form>
+    </div>
+</body>
+</html>
