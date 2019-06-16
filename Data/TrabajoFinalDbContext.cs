@@ -19,6 +19,8 @@ namespace TRABAJOFINAL.Data
 
         public DbSet<Alerta> Alertas{get; set;}
 
+        public DbSet<Sugerencias> Sugerencias { get; set; } 
+
 
         public TrabajoFinalDbContext(DbContextOptions<TrabajoFinalDbContext> o) : base(o) {
 
