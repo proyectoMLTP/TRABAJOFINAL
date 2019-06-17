@@ -1,33 +1,35 @@
 @{
     ViewData["Title"]="Dar en adopción";
 }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-</head>
-<body>
-    <h1>BIENVENIDO AL APARTADO DE DAR EN ADOPCION</h1>
-    <p>Por Favor llene correctemnte el fomulario.</p>
-    <div>
-        <form asp-action="DarAdopcion" method="POST">
-            <h2>DATOS DE LA MASCOTA</h2>
-            <div>
-                <label >EDAD DE LA MASCOTA: </label>
-                <br>
-                <input type="text" name="edad" >
-            </div>
-            <div>
-                <label >FOTO </label>
-                <br>
-                <input type="file" name="foto">
-            </div>
-            
-            <button>Dar en adopcion</button>
-        </form>
+
+<div class="container-fluid" style="background-image: url(http://www.wuf.pe/assets/img/bloq3.jpg)">
+    <div class="container text-center">
+        <img src="https://i.ibb.co/t2rH2rS/dara.png"><br>
     </div>
-</body>
-</html>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <form asp-action="DarAdopcion" method="POST">
+                    
+                    <p>Por Favor llene correctamente el fomulario</p>
+                    <h2>INGRESE DATOS DE LA MASCOTA</h2><br>
+                    <div class="form-group">
+                        <label >EDAD DE LA MASCOTA: </label><br>
+                        <input class="form-control" type="text" name="edad" >
+                    </div>
+                    <div class="form-group">
+                        <label >FOTO </label><br>
+                        <input class="form-control-file" type="file" name="foto">
+                    </div>
+                    <br>
+                    <button class="btn btn-primary">DAR EN ADOPCIÓN</button>
+                </form>
+            </div>
+
+            <div class="col-6">
+                <img class="img-thumbnail" src="https://mexperiencia.com/wp-content/uploads/2018/11/perro-caja.jpg"><br><br> 
+            </div>
+        </div>
+    </div>
+</div>
