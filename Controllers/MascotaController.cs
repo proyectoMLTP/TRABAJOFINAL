@@ -20,6 +20,22 @@ namespace TRABAJOFINAL.Controllers
         
         public IActionResult Esterilizacion()
         {
+         
+          return View();
+        }
+        [HttpPost]
+        public IActionResult Esterilizacion(Mascota masc)
+        {
+          if(ModelState.IsValid){
+            masc.estado="Para proceso de esterilización";
+             _con.Mascota.Add(masc);
+             _con.SaveChanges();
+             return RedirectToAction("ProcesoEsterilizacion");
+          }
+          return View();
+        }
+        public IActionResult ProcesoEsterilizacion()
+        {
           //TODO: Implement Realistic Implementation
           return View();
         }

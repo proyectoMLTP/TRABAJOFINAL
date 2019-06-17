@@ -14,7 +14,7 @@
                 <form asp-action="DarAdopcion" method="post">
                     
                     <p>Por Favor llene correctamente el fomulario</p>
-                    <h2>INGRESE DATOS DE LA MASCOTA</h2><br>
+                    <h2>INGRESE DATOS DE LA MASCOTA:</h2><br>
                     <div class="form-group">
                         <label >EDAD DE LA MASCOTA EN MESES: </label><br>
                         <input class="form-control" type="int" asp-for="edad" >
@@ -26,9 +26,9 @@
                     <br>
                     <div class="form-group">
                         <select asp-for="categoria" class="browser-default custom-select">
-                        <option value="SEXO" selected>SEXO</option>
-                        <option value="macho">MACHO</option>
-                        <option value="hembra">HEMBRA</option>
+                        <option value="SEXO" selected>Elija...</option>
+                        <option value="MACHO">Macho</option>
+                        <option value="HEMBRA">Hembra</option>
                         </select> 
                     </div>
                     <br>
