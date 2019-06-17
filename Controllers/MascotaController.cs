@@ -1,3 +1,4 @@
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using TRABAJOFINAL.Data;
 using TRABAJOFINAL.Models;
@@ -25,8 +26,8 @@ namespace TRABAJOFINAL.Controllers
 
         public IActionResult Adoptar()
         {
-          //TODO: Implement Realistic Implementation
-          return View();
+          var mascotas= _con.Mascota.ToList();
+          return View(mascotas);
         }
         public IActionResult DarAdopcion()
         {
@@ -37,12 +38,16 @@ namespace TRABAJOFINAL.Controllers
         public IActionResult DarAdopcion(Mascota masc)
         {
            if(ModelState.IsValid){
-                
-                
-                _con.Mascota.Add(masc);
-                
-                _con.SaveChanges();
-                return RedirectToAction("Index","home");
+                if(masc.categoria!="SEXO"){
+                    masc.estado="Espera para ser adoptar";
+                    _con.Mascota.Add(masc);
+                    _con.SaveChanges();
+                    return RedirectToAction("Index","home");
+                }else
+                {
+                  
+                  return RedirectToAction("DarAdopcion");
+                }
             }
             
         
