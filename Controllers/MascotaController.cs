@@ -1,9 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
+using TRABAJOFINAL.Data;
+using TRABAJOFINAL.Models;
 
 namespace TRABAJOFINAL.Controllers
 {
     public class MascotaController:Controller
     {
+      TrabajoFinalDbContext _con;
+
+      public MascotaController(TrabajoFinalDbContext tr){
+        _con=tr;
+
+      }
         public IActionResult Mascotas()
         {
             return View();
@@ -25,5 +33,7 @@ namespace TRABAJOFINAL.Controllers
           //TODO: Implement Realistic Implementation
           return View();
         }
+
+        
     }
 }
