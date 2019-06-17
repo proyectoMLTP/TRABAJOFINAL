@@ -1,0 +1,73 @@
+@{
+    ViewData["Title"]="DONACION MONETRIA";
+}
+
+<div class="container-fluid" style="background-image: url(http://www.wuf.pe/assets/img/bloq2.jpg)">
+
+    <h1>FORMULARIO DE DONACIONES</h1>
+    
+    <div class="container mt-5">
+        <div class="text-center">
+            <h1>DATOS</h1>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <form asp-action="donacionFinalizadaMOnetaria" >
+                    <p>Por favor llene todos los datos solicitados</p>
+                        
+    
+                    <div class="form-group">
+                        <label for="">NUMEROS DE TARJETA </label><br>
+                        <input class="form-control"  placeholder="4475-4567-7894-1231">
+                    </div>
+                 
+                    <div class="form-group">
+                        <label for="">INGRESE LA FECHA DE VENCIMIENTO</label><br>
+           
+                        <select>
+                                <option value="01">January</option>
+                                <option value="02">February </option>
+                                <option value="03">March</option>
+                                <option value="04">April</option>
+                                <option value="05">May</option>
+                                <option value="06">June</option>
+                                <option value="07">July</option>
+                                <option value="08">August</option>
+                                <option value="09">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                        </select>
+                        <select>
+                                <option value="16"> 2016</option>
+                                <option value="17"> 2017</option>
+                                <option value="18"> 2018</option>
+                                <option value="19"> 2019</option>
+                                <option value="20"> 2020</option>
+                                <option value="21"> 2021</option>
+                        </select>
+                    </div>
+                
+        
+                    <div class="form-group">
+                            <label for="">INGRESE LOS 3 NUEMRO DE LAS PARTE TRASERA:  </label><br>
+                            <input class="form-control" placeholder="285">
+                    </div>
+                    
+                    <div class="text-center">
+                            <button class="btn btn-danger btn-lg">DONAR</button>
+                    </div><br>
+                    
+                </form>
+                </div>
+            </div>
+             
+            <div class="col-6 text-center">
+                <img src="http://www.acupunturademascotas.com/wp-content/uploads/2018/02/perro_vet.png" width="450">   
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TRABAJOFINAL.Migrations
 {
-    public partial class version0 : Migration
+    public partial class migraciones : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -51,32 +51,33 @@ namespace TRABAJOFINAL.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Mascota",
-                columns: table => new
-                {
-                    id = table.Column<int>(nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    nombre = table.Column<string>(nullable: true),
-                    edad = table.Column<int>(nullable: false),
-                    categoria = table.Column<string>(nullable: true),
-                    estado = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Mascota", x => x.id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Tipo",
+                name: "Donaciones",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Tipo = table.Column<string>(nullable: true),
+                    fecha = table.Column<DateTime>(nullable: false),
+                    descripcion = table.Column<string>(nullable: true),
                     Nombre = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Tipo", x => x.Id);
+                    table.PrimaryKey("PK_Donaciones", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Sugerencias",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    correo = table.Column<string>(nullable: true),
+                    mensaje = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Sugerencias", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -98,6 +99,29 @@ namespace TRABAJOFINAL.Migrations
                         principalTable: "AspNetRoles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Alertas",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    telefono = table.Column<string>(nullable: true),
+                    direccion = table.Column<string>(nullable: true),
+                    descripcion = table.Column<string>(nullable: true),
+                    tipo = table.Column<string>(nullable: true),
+                    usuarioId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Alertas", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Alertas_AspNetUsers_usuarioId",
+                        column: x => x.usuarioId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -186,32 +210,33 @@ namespace TRABAJOFINAL.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Donaciones",
+                name: "Mascota",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
+                    id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    NombreId = table.Column<string>(nullable: true),
-                    TipoId = table.Column<int>(nullable: true),
-                    fecha = table.Column<DateTime>(nullable: false),
-                    descripcion = table.Column<string>(nullable: true)
+                    nombre = table.Column<string>(nullable: true),
+                    edad = table.Column<int>(nullable: false),
+                    categoria = table.Column<string>(nullable: true),
+                    estado = table.Column<string>(nullable: true),
+                    foto = table.Column<string>(nullable: true),
+                    usuarioId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Donaciones", x => x.Id);
+                    table.PrimaryKey("PK_Mascota", x => x.id);
                     table.ForeignKey(
-                        name: "FK_Donaciones_AspNetUsers_NombreId",
-                        column: x => x.NombreId,
+                        name: "FK_Mascota_AspNetUsers_usuarioId",
+                        column: x => x.usuarioId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Donaciones_Tipo_TipoId",
-                        column: x => x.TipoId,
-                        principalTable: "Tipo",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Alertas_usuarioId",
+                table: "Alertas",
+                column: "usuarioId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -251,18 +276,16 @@ namespace TRABAJOFINAL.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Donaciones_NombreId",
-                table: "Donaciones",
-                column: "NombreId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Donaciones_TipoId",
-                table: "Donaciones",
-                column: "TipoId");
+                name: "IX_Mascota_usuarioId",
+                table: "Mascota",
+                column: "usuarioId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Alertas");
+
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
@@ -285,13 +308,13 @@ namespace TRABAJOFINAL.Migrations
                 name: "Mascota");
 
             migrationBuilder.DropTable(
+                name: "Sugerencias");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
-                name: "Tipo");
         }
     }
 }

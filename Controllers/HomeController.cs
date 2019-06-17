@@ -95,6 +95,40 @@ namespace TRABAJOFINAL.Controllers
         [HttpPost]
          public IActionResult Donaciones(Donaciones d)
         {
+          if(ModelState.IsValid){
+            if(d.Tipo!="tipo"){
+                d.fecha=DateTime.Now;
+                _context.Donaciones.Add(d);
+                _context.SaveChanges();
+                
+                if(d.Tipo=="monetario"){
+                  return RedirectToAction("ValidarDonacionMone");
+                }else{
+                    return RedirectToAction("ValidarDonacionHUma");
+
+                }
+              }else{
+                  
+                return RedirectToAction("Donaciones");
+                
+              }
+                
+            }
+          return View(d);
+        }
+
+        public IActionResult ValidarDonacionMone()
+        {
+          //TODO: Implement Realistic Implementation
+          return View();
+        }
+        public IActionResult donacionFinalizadaMOnetaria()
+        {
+          //TODO: Implement Realistic Implementation
+          return View();
+        }
+        public IActionResult ValidarDonacionHUma()
+        {
           //TODO: Implement Realistic Implementation
           return View();
         }
