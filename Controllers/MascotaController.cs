@@ -34,7 +34,7 @@ namespace TRABAJOFINAL.Controllers
              _con.SaveChanges();
              return RedirectToAction("ProcesoEsterilizacion");
           }
-          return View();
+          return View(masc);
         }
         public IActionResult ProcesoEsterilizacion()
         {
