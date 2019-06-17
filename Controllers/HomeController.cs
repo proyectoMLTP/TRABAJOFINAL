@@ -71,11 +71,15 @@ namespace TRABAJOFINAL.Controllers
           if(ModelState.IsValid){
                 _context.Sugerencias.Add(sug);
                 _context.SaveChanges();
-                return RedirectToAction("ValidarForm");
+                return RedirectToAction("validarSugerencias");
             }
           return View(sug);
         }
-        
+        public IActionResult validarSugerencias()
+        {
+          //TODO: Implement Realistic Implementation
+          return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
