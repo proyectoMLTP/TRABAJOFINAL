@@ -44,7 +44,7 @@ namespace TRABAJOFINAL.Controllers
 
         public IActionResult Adoptar()
         {
-          var mascotas= _con.Mascota.ToList();
+          var mascotas= _con.Mascota.Where(X=> X.estado=="En adopcion").ToList();
           return View(mascotas);
         }
         public IActionResult DarAdopcion()
@@ -75,6 +75,12 @@ namespace TRABAJOFINAL.Controllers
         {
           //TODO: Implement Realistic Implementation
           return View();
+        }
+
+        public IActionResult ListaMascota()
+        {
+          var mascotas= _con.Mascota.ToList();
+          return View(mascotas);
         }
     }
 }
