@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using TRABAJOFINAL.Data;
 using TRABAJOFINAL.Models;
+
 
 namespace TRABAJOFINAL.Controllers
 {
@@ -45,7 +47,10 @@ namespace TRABAJOFINAL.Controllers
         public IActionResult Formualrioalertas(Alerta al)
         {
             if(ModelState.IsValid){
+                
+                
                 _context.Alertas.Add(al);
+                
                 _context.SaveChanges();
                 return RedirectToAction("ValidarForm");
             }

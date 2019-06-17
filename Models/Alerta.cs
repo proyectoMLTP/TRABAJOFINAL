@@ -11,6 +11,8 @@ namespace TRABAJOFINAL.Models
         public string descripcion { get; set; }
         public string tipo { get; set; }
 
+        public string usuarioId { get; set; }
+
 
         public Usuario usuario { get; set; }
     }
