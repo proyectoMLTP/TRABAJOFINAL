@@ -42,7 +42,7 @@ namespace TRABAJOFINAL.Controllers
                     masc.estado="Espera para ser adoptar";
                     _con.Mascota.Add(masc);
                     _con.SaveChanges();
-                    return RedirectToAction("Mascota");
+                    return RedirectToAction("Index","home");
                 }else
                 {
                   
