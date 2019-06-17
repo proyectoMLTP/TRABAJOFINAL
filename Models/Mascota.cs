@@ -7,6 +7,7 @@ namespace TRABAJOFINAL.Models
         public int edad { get; set; }
         public string categoria { get; set; }
         public string estado { get; set; }
+        public string foto { get; set; }
         
     }
 }

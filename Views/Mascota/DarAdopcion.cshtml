@@ -1,5 +1,6 @@
+@model Mascota
 @{
-    ViewData["Title"]="Dar en adopción";
+    ViewData["Title"]="Dar_en_Adopción";
 }
 
 <div class="container-fluid" style="background-image: url(http://www.wuf.pe/assets/img/bloq3.jpg)">
@@ -10,17 +11,17 @@
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <form asp-action="DarAdopcion" method="POST">
+                <form asp-action="DarAdopcion" method="post">
                     
                     <p>Por Favor llene correctamente el fomulario</p>
                     <h2>INGRESE DATOS DE LA MASCOTA</h2><br>
                     <div class="form-group">
                         <label >EDAD DE LA MASCOTA: </label><br>
-                        <input class="form-control" type="text" name="edad" >
+                        <input class="form-control"  asp-for="edad" >
                     </div>
                     <div class="form-group">
                         <label >FOTO </label><br>
-                        <input class="form-control-file" type="file" name="foto">
+                        <input class="form-control"  asp-for="foto">
                     </div>
                     <br>
                     <button class="btn btn-primary">DAR EN ADOPCIÓN</button>

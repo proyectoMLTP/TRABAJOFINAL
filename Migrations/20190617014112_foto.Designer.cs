@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TRABAJOFINAL.Data;
 
 namespace TRABAJOFINAL.Migrations
 {
     [DbContext(typeof(TrabajoFinalDbContext))]
-    partial class TrabajoFinalDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190617014112_foto")]
+    partial class foto
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -239,8 +241,6 @@ namespace TRABAJOFINAL.Migrations
                     b.Property<int>("edad");
 
                     b.Property<string>("estado");
-
-                    b.Property<string>("foto");
 
                     b.Property<string>("nombre");
 
