@@ -2,17 +2,18 @@
 @{
     ViewData["Title"]="Adopta";
 }
+<div class="text-center">
+    <img  src="https://i.ibb.co/KrScXvD/adoptar.png"><br><br>
+</div>
 <div class="container-fluid" style="background-image: url(http://www.wuf.pe/assets/img/bloq3.jpg)">
     <div class="container text-center">
-        <img src="https://i.ibb.co/KrScXvD/adoptar.png"><br>
-        
-        <h2>ACEPTA UN NUEVO INEGRANTE EN TU FAMILIA</h2><br>
+        <img src="https://i.ibb.co/fqKXz41/acepta.png" width="1000"><br><br>
     </div>
         <div class="row">
         
             @foreach(var mas in Model){
             <div class="col-3">
-                <div class="card" style="width: 18rem;">
+                <div class="card border-dark" style="width: 18rem;">
                     <img src="@mas.foto" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">EDAD: @mas.edad meses</p>
