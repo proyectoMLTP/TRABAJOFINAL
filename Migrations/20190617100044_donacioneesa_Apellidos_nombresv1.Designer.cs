@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TRABAJOFINAL.Data;
 
 namespace TRABAJOFINAL.Migrations
 {
     [DbContext(typeof(TrabajoFinalDbContext))]
-    partial class TrabajoFinalDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190617100044_donacioneesa_Apellidos_nombresv1")]
+    partial class donacioneesa_Apellidos_nombresv1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -210,15 +212,19 @@ namespace TRABAJOFINAL.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Nombre");
+                    b.Property<string>("ApellidoNombre");
 
                     b.Property<string>("Tipo");
+
+                    b.Property<string>("UsuarioId");
 
                     b.Property<string>("descripcion");
 
                     b.Property<DateTime>("fecha");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UsuarioId");
 
                     b.ToTable("Donaciones");
                 });
@@ -322,6 +328,13 @@ namespace TRABAJOFINAL.Migrations
                     b.HasOne("TRABAJOFINAL.Models.Usuario", "usuario")
                         .WithMany("Alertas")
                         .HasForeignKey("usuarioId");
+                });
+
+            modelBuilder.Entity("TRABAJOFINAL.Models.Donaciones", b =>
+                {
+                    b.HasOne("TRABAJOFINAL.Models.Usuario")
+                        .WithMany("Donaciones")
+                        .HasForeignKey("UsuarioId");
                 });
 
             modelBuilder.Entity("TRABAJOFINAL.Models.Mascota", b =>

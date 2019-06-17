@@ -8,8 +8,6 @@ namespace TRABAJOFINAL.Models
         
         public string direccion { get; set; }
         public string telefono { get; set; }
-
-        public List<Donaciones> Donaciones { get; set; }
         public List<Alerta> Alertas { get; set; }
         public List<Mascota> Mascotas{get; set; }
     }

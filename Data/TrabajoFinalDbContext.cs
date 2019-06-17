@@ -14,9 +14,6 @@ namespace TRABAJOFINAL.Data
 
         public DbSet<Donaciones> Donaciones{get; set;}
 
-        public DbSet<Tipo> Tipo{get; set;}
-
-
         public DbSet<Alerta> Alertas{get; set;}
 
         public DbSet<Sugerencias> Sugerencias { get; set; } 

@@ -87,6 +87,18 @@ namespace TRABAJOFINAL.Controllers
          
         }
 
+        public IActionResult Donaciones()
+        {
+          //TODO: Implement Realistic Implementation
+          return View();
+        }
+        [HttpPost]
+         public IActionResult Donaciones(Donaciones d)
+        {
+          //TODO: Implement Realistic Implementation
+          return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
