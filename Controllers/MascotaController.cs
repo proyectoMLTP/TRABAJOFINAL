@@ -27,6 +27,8 @@ namespace TRABAJOFINAL.Controllers
         public IActionResult Esterilizacion(Mascota masc)
         {
           if(ModelState.IsValid){
+            var user = _con.Usuarios.FirstOrDefault(x=> x.UserName == User.Identity.Name);
+            masc.usuarioId=user.Id;
             masc.estado="Para proceso de esterilización";
              _con.Mascota.Add(masc);
              _con.SaveChanges();
