@@ -46,8 +46,8 @@
                          <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Sugerencias">SUGERENCIAS</a>
                         </li>
-                         
-                        @if (Context.User.Identity.IsAuthenticated) {
+                            
+                            @if (Context.User.Identity.IsAuthenticated) {
                             <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Mascota" asp-action="Mascotas">MASCOTAS</a>
                             </li>

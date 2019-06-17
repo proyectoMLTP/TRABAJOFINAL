@@ -42,7 +42,7 @@ namespace TRABAJOFINAL.Controllers
                     masc.estado="Espera para ser adoptar";
                     _con.Mascota.Add(masc);
                     _con.SaveChanges();
-                    return RedirectToAction("Index","home");
+                    return RedirectToAction("GraciasDarAdopcion");
                 }else
                 {
                   
@@ -52,6 +52,11 @@ namespace TRABAJOFINAL.Controllers
             
         
           return View(masc);
+        }
+        public IActionResult GraciasDarAdopcion()
+        {
+          //TODO: Implement Realistic Implementation
+          return View();
         }
     }
 }
