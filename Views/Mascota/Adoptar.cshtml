@@ -4,34 +4,25 @@
 }
 <div class="container-fluid" style="background-image: url(http://www.wuf.pe/assets/img/bloq3.jpg)">
     <div class="container text-center">
-        <img src="https://i.ibb.co/KrScXvD/adoptar.png">
-        <p>Bienvenido en este apartadado podras adoptar un integrante más a tu familia.</p><br>
+        <img src="https://i.ibb.co/KrScXvD/adoptar.png"><br>
+        
+        <h2>ACEPTA UN NUEVO INEGRANTE EN TU FAMILIA</h2><br>
     </div>
-
-    <div class="container">
         <div class="row">
-            <div class="col-6">
-                
-                <form asp-action="Adoptar" method="POST">
-                    <h2>ACEPTA UN NUEVO INEGRANTE EN TU FAMILIA</h2>
-                    
-                    <div class="form-group">
-                        @foreach(var mas in Model){
-                            <img src="@mas.foto" width="120">
-                            <br>
-                            <p>EDAD: @mas.edad</p>
-                            <br>
-                            <p>SEXO: @mas.categoria</p>
-                            <br>
-                        }
+        
+            @foreach(var mas in Model){
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="@mas.foto" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">EDAD: @mas.edad meses</p>
+                        <p class="card-text">SEXO: @mas.categoria</p>
                     </div>
-                </form>
-            </div>
-
-            <div class="col-6">
-                <img class="img-thumbnail" src="https://seguros.elcorteingles.es/admin/assets/uploads/files/images/thumbnails_l/adoptar-perro.jpg"><br><br> 
-            </div>
+                </div><br>
+            </div><br>
+            }
         </div>
-    </div>
+
+
 </div>
 
