@@ -8,6 +8,9 @@ namespace TRABAJOFINAL.Models
         public string categoria { get; set; }
         public string estado { get; set; }
         public string foto { get; set; }
+        public string usuarioId { get; set; }
+
+        public Usuario usuario { get; set; }
         
     }
 }

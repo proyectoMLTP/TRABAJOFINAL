@@ -34,9 +34,7 @@
                         <label for="">DESCRIPCIÓN:  </label><br>
                         <textarea class="form-control" asp-for="descripcion" rows="5"></textarea>
                     </div>
-                    <div>
-                        <input type="hidden" asp-for="usuarioId" value=@Context.User.Identity.Name>
-                    </div>
+                   
 
                     <div>
                         <input type="hidden" asp-for="tipo" value=@ViewBag.id>

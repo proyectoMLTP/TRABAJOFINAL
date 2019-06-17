@@ -47,7 +47,8 @@ namespace TRABAJOFINAL.Controllers
         public IActionResult Formualrioalertas(Alerta al)
         {
             if(ModelState.IsValid){
-                
+                var user = _context.Usuarios.FirstOrDefault(x=> x.UserName == User.Identity.Name);
+                al.usuarioId=user.Id;
                 
                 _context.Alertas.Add(al);
                 
