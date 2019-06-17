@@ -14,7 +14,11 @@
             @foreach(var mas in Model){
             <div class="col-3">
                 <div class="card border-dark" style="width: 18rem;">
-                    <img src="@mas.foto" class="card-img-top" alt="...">
+                    <form action="adoptar" method="post">
+                        <input type="hidden" value="@mas.id" name="id">
+                        <button><img src="@mas.foto" class="card-img-top" alt="..."></button>
+                    </form>
+                    
                     <div class="card-body">
                         <p class="card-text">EDAD: @mas.edad meses</p>
                         <p class="card-text">SEXO: @mas.categoria</p>

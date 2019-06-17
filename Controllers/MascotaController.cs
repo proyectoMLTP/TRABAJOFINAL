@@ -55,6 +55,23 @@ namespace TRABAJOFINAL.Controllers
           var mascotas= _con.Mascota.Where(X=> X.estado=="En adopcion").ToList();
           return View(mascotas);
         }
+        
+        [HttpPost]
+        public IActionResult Adoptar(int id)
+        {
+          var mascota = _con.Mascota.Find(id);
+          mascota.estado="En proceso de adopción";
+          _con.SaveChanges();
+          return RedirectToAction("ValidarAdopcion");
+        }
+       public IActionResult validarAdopcion()
+       {
+         //TODO: Implement Realistic Implementation
+         return View();
+       }
+        
+
+        
         public IActionResult MascotasRescatadas()
         {
           //TODO: Implement Realistic Implementation
