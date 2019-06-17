@@ -29,11 +29,18 @@ namespace TRABAJOFINAL.Controllers
           if(ModelState.IsValid){
             var user = _con.Usuarios.FirstOrDefault(x=> x.UserName == User.Identity.Name);
             masc.usuarioId=user.Id;
-            masc.estado="Para proceso de esterilización";
-             _con.Mascota.Add(masc);
-             _con.SaveChanges();
-             return RedirectToAction("ProcesoEsterilizacion");
-          }
+                if(masc.categoria!="SEXO"){
+                   masc.estado="Para proceso de esterilización";
+                    _con.Mascota.Add(masc);
+                    _con.SaveChanges();
+                    return RedirectToAction("ProcesoEsterilizacion");
+                }else
+                {
+                  
+                  return RedirectToAction("Esterilizacion");
+                }
+            }
+          
           return View(masc);
         }
         public IActionResult ProcesoEsterilizacion()
