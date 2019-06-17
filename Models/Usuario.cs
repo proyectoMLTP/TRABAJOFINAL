@@ -11,5 +11,6 @@ namespace TRABAJOFINAL.Models
 
         public List<Donaciones> Donaciones { get; set; }
         public List<Alerta> Alertas { get; set; }
+        public List<Mascota> Mascotas{get; set; }
     }
 }
