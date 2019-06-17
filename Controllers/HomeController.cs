@@ -77,8 +77,14 @@ namespace TRABAJOFINAL.Controllers
         }
         public IActionResult validarSugerencias()
         {
-          //TODO: Implement Realistic Implementation
+          
           return View();
+        }
+        public IActionResult ListaSugerencias()
+        {
+          var Sugerencias= _context.Sugerencias.ToList();
+          return View(Sugerencias);  
+         
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

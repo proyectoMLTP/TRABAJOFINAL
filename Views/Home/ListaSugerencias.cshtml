@@ -1,0 +1,29 @@
+@model List<Sugerencias>
+@{
+    ViewData["Title"]="Lista de Sugerencias";
+}
+<div class="text-center">
+        
+    
+    <div class="container-fluid" style="background-image: url(http://www.wuf.pe/assets/img/bloq3.jpg)">
+        <div class="container text-center">
+            <h1>LISTA SE SUGERENCIAS</h1>
+        </div>
+            <div class="row">
+            
+                @foreach(var sug in Model){
+                <div class="col-3">
+                    
+                        
+                    <div class="card-body">
+                            <p class="card-text">SUGERENCIA: @sug.mensaje</p>
+                            <p class="card-text">CORREO: @sug.correo</p>
+                        
+                    </div><br>
+                </div><br>
+                }
+            </div>
+    </div>
+    
+</div>
+    

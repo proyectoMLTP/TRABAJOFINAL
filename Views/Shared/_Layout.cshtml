@@ -35,7 +35,37 @@
                 
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
+                        
+                            
+                            @if (Context.User.Identity.IsAuthenticated  && Context.User.Identity.Name=="AdminPETBienestar") {
+                         
+                            <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">INICIO</a>
+                        </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Nosotros">NOSOTROS</a>
+                        </li> 
+              
+                            <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="MASCOTA" asp-action="ListaMascota">LISTA DE MASCOTAS</a>
+                            </li>
+
+                            <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="HOME" asp-action="ListaSugerencias">LISTA DE SUGERENCIAS</a>
+                            </li>
+
+                            <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Mascota" asp-action="MascotasRescatadas">INGRESAR NUEVA MASCOTA RESCATADA</a>
+                            </li>
+
+
+                            <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Cuenta" asp-action="CerrarSesion">Cerrar sesión</a>
+                            </li>
+
+
+                        }else if(Context.User.Identity.IsAuthenticated){
+                            <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">INICIO</a>
                         </li>
                         <li class="nav-item">
@@ -46,26 +76,6 @@
                          <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Sugerencias">SUGERENCIAS</a>
                         </li>
-                            
-                            @if (Context.User.Identity.IsAuthenticated  && Context.User.Identity.Name=="AdminPETBienestar") {
-                            <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Mascota" asp-action="Mascotas">MASCOTAS</a>
-                            </li>
-
-                            <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Alertas">ALERTAS</a>
-                            </li>
-
-                            <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="MASCOTA" asp-action="ListaMascota">LISTA DE MASCOTAS</a>
-                            </li>
-
-                            <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cuenta" asp-action="CerrarSesion">Cerrar sesión</a>
-                            </li>
-
-
-                        }else if(Context.User.Identity.IsAuthenticated){
                             <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Mascota" asp-action="Mascotas">MASCOTAS</a>
                             </li>
@@ -79,6 +89,17 @@
                             </li>
                         }
                         else {
+                            <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">INICIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Nosotros">NOSOTROS</a>
+                        </li> 
+                        
+                         
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Sugerencias">SUGERENCIAS</a>
+                        </li>
                             <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Cuenta" asp-action="Unetenos">UNETENOS</a>
                         </li>

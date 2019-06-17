@@ -55,6 +55,31 @@ namespace TRABAJOFINAL.Controllers
           var mascotas= _con.Mascota.Where(X=> X.estado=="En adopcion").ToList();
           return View(mascotas);
         }
+        public IActionResult MascotasRescatadas()
+        {
+          //TODO: Implement Realistic Implementation
+          return View();
+        }
+        [HttpPost]
+        public IActionResult MascotasRescatadas(Mascota masc)
+        {
+           if(ModelState.IsValid){
+             
+                if(masc.categoria!="SEXO"){
+                    masc.estado="Mascota rescatada; esperando diagnostico";
+                    _con.Mascota.Add(masc);
+                    _con.SaveChanges();
+                    return RedirectToAction("ListaMascota");
+                }else
+                {
+                  
+                  return RedirectToAction("MascotasRescatadas");
+                }
+            }
+            
+        
+          return View(masc);
+        }
         public IActionResult DarAdopcion()
         {
           //TODO: Implement Realistic Implementation
@@ -63,7 +88,10 @@ namespace TRABAJOFINAL.Controllers
         [HttpPost]
         public IActionResult DarAdopcion(Mascota masc)
         {
+          
            if(ModelState.IsValid){
+              var user = _con.Usuarios.FirstOrDefault(x=> x.UserName == User.Identity.Name);
+              masc.usuarioId=user.Id;
                 if(masc.categoria!="SEXO"){
                     masc.estado="Espera para ser adoptado";
                     _con.Mascota.Add(masc);
