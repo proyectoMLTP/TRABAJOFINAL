@@ -3,17 +3,44 @@
     ViewData["Title"]="Sugerencias";
 }
 
-<form asp-action="sugerencias">
-    <div>
-        <label for="">Mensaje: </label><br>
-        <textarea asp-for="mensaje" cols="30" rows="10"></textarea><br>
-    </div>
-    <div>
-        <label for="">Correo: </label>
-        <input type="email" asp-for="correo">
-    </div>
+<div class="container">
+    <img src="https://clinicaveterinariasanblasalicante.com/index_files/mascotas3.png" width="1100">
+</div>
+<div class="container-fluid" style="background-image: url(http://www.wuf.pe/assets/img/bloq2.jpg)" >
+    <div class="container">
+        <div class="text-center">
+            <br><img src="https://i.ibb.co/yXKJ6ZS/Sugerencias.png"><br><br>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <form asp-action="sugerencias">
+                    <img src="">
+                    <div class="form-group">
+                        <label for="">CORREO ELECTRONICO: </label><br>
+                        <input type="email" class="form-control" asp-for="correo" placeholder="Ingrese correo electronico">
+                    </div>
+                    <div class="form-group">
+                        <label for="">MENSAJE:  </label><br>
+                        <textarea type="submit" class="form-control" asp-for="mensaje" rows="5"></textarea>
+                    </div>
+                    <br>
+                    <button class="btn btn-primary">ENVIAR</button>
+                    <br><br>
+                </form>
+            </div>
+            <div class="col-6" style="">
+                <h4>Sede Barranco</h4>
+                <p>Av. República de Panamá 6584 Barranco </p>
+                <p>998 195 193 | 01 446 6179 | 01 637 5132</p>
 
-    <div>
-        <button type="submit">Enviar</button>
+                <h4>Sede Lince</h4>
+                <p>Av. Militar 2026 Lince</p>
+                <p>936 283 095 | 01 517 6681</p>
+                
+                <h4>Sede San Juan de Miraflores</h4>
+                <p>Av. Pedro Miotta 620 San Juan de Miraflores</p>
+                <p>932 008 081 | 01 656 6104 | 01 656 6264 | 01 656 6491</p>
+            </div>
+        </div>
     </div>
-</form>
+</div>
