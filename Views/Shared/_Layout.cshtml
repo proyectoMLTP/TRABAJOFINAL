@@ -41,22 +41,36 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Nosotros">NOSOTROS</a>
                         </li> 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Mascota" asp-action="Mascotas">MASCOTAS</a>
-                        </li>
-                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Alertas">ALERTAS</a>
-                        </li>
+                        
+                         
                          <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Sugerencias">SUGERENCIAS</a>
                         </li>
-                         <li class="nav-item">
+                         
+                        @if (Context.User.Identity.IsAuthenticated) {
+                            <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Mascota" asp-action="Mascotas">MASCOTAS</a>
+                            </li>
+
+                            <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Alertas">ALERTAS</a>
+                            </li>
+
+                            <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Cuenta" asp-action="CerrarSesión">Cerrar sesión</a>
+                            </li>
+
+
+                        }
+                        else {
+                            <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Cuenta" asp-action="Unetenos">UNETENOS</a>
                         </li>
                          <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Cuenta" asp-action="IniciarSesion">INGRESAR SESION</a>
                             
                         </li> 
+                        }
                         
                          
                     </ul>

@@ -8,6 +8,7 @@
 </div><br>
 <div class="container-fluid" style="background-image: url(http://www.wuf.pe/assets/img/bloq3.jpg)" >
     <div class="container">
+        <div asp-validation-summary="All" style="color: red;" ></div>  
         <div class="text-center">
             <br><img src="https://i.ibb.co/p0DvBcZ/Iniciar-Sesion.png"><br><br>
         </div>
@@ -23,7 +24,7 @@
                     <div class="form-group">
                         <label for="">CONTRASEÑA: </label> 
                         <br> 
-                        <input class="form-control" asp-for = "Password" placeholder="Ingrese contraseña">
+                        <input class="form-control" type="password" asp-for="Password" placeholder="Ingrese contraseña">
                     </div>
                     <br>
                     <button class="btn btn-primary">INICIAR SESION</button>
