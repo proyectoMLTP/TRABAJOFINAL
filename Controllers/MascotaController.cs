@@ -1,5 +1,6 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using TRABAJOFINAL.Data;
 using TRABAJOFINAL.Models;
 
@@ -64,7 +65,7 @@ namespace TRABAJOFINAL.Controllers
         {
            if(ModelState.IsValid){
                 if(masc.categoria!="SEXO"){
-                    masc.estado="Espera para ser adoptar";
+                    masc.estado="Espera para ser adoptado";
                     _con.Mascota.Add(masc);
                     _con.SaveChanges();
                     return RedirectToAction("GraciasDarAdopcion");
@@ -86,8 +87,53 @@ namespace TRABAJOFINAL.Controllers
 
         public IActionResult ListaMascota()
         {
+          
+         
           var mascotas= _con.Mascota.ToList();
           return View(mascotas);
+        }
+
+        public IActionResult Actualizar(int id)
+        {
+            var p = _con.Mascota.FirstOrDefault(x => x.id == id);
+            
+
+            if (p == null) {
+                return NotFound();
+            }
+
+            return View(p);
+        }
+
+        [HttpPost]
+        public IActionResult Actualizar(Mascota m)
+        {
+            if (ModelState.IsValid) {
+              if(m.estado!="estado"){
+                    var mascot = _con.Mascota.Find(m.id);
+                    mascot.estado = m.estado;
+                    _con.SaveChanges();
+                    return RedirectToAction("ListaMascota");
+                }else
+                {
+                  
+                  return RedirectToAction("Actualizar");
+                }
+            }
+
+            return View(m);
+        }
+
+        public IActionResult Borrar(int id)
+        {
+            var p = _con.Mascota.FirstOrDefault(x => x.id == id);
+
+            if (p != null) {
+                _con.Mascota.Remove(p);
+                _con.SaveChanges();
+            }
+
+            return RedirectToAction("ListaMascota");
         }
     }
 }

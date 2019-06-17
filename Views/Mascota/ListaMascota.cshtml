@@ -1,0 +1,39 @@
+@model List<Mascota>
+
+@{
+    ViewData["Title"]="Listado de tu mascota";
+    
+}
+<h1>Lista de mascotas</h1>
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Categoría</th>
+        <th>Estado</th>
+        <th>Foto</th>
+        <th>UsuarioId</th>
+    </tr>
+
+    @foreach(var p in Model) {
+        <tr>
+           
+            <td>@p.id</td>
+            <td>@p.nombre</td>
+            <td>@p.edad</td>
+            <td>@p.categoria</td>
+            <td>@p.estado</td>
+
+            <td><img src="@p.foto" width="300"></td>
+            <td>@p.usuarioId</td>
+            
+            <td>
+                <a href="~/Mascota/actualizar/@p.id">Actualizar</a> | 
+                <a href="~/Mascota/borrar/@p.id">Borrar</a>
+            </td>
+        </tr>
+    }
+    
+
+</table>

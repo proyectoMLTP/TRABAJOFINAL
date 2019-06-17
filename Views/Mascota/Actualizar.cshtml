@@ -1,0 +1,32 @@
+@model Mascota
+@{
+    ViewData["Title"]="Actualizar";
+}
+
+
+<h1>ACTUALIZACION DE CATEGORIA EN LA TABLA MASCOTAS</h1>
+
+<form asp-action="Actualizar" method="post">
+
+<input type="hidden"  asp-for="id">
+
+
+
+<div class="form-group">
+    
+   <div class="col-6">
+        <label >ESTADO: </label><br>
+        <select asp-for="estado" class="browser-default custom-select">
+        <option value="estado" selected>Elegir...</option>
+        <option value="En adopcion" >EN ADOPCION</option>
+        <option value="ESTERILIZAR">ESTERILIZAR</option>
+        
+        </select><br>
+    </div>
+    
+</div>
+
+
+<button class="btn btn-primary">ACTUALIZAR CATEGORIA</button>
+
+</form>

@@ -10,7 +10,7 @@ namespace TRABAJOFINAL.Models
         public string foto { get; set; }
         public string usuarioId { get; set; }
 
-        public Usuario usuario { get; set; }
+        public virtual Usuario usuario { get; set; }
         
     }
 }
