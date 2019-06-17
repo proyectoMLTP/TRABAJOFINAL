@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using TRABAJOFINAL.Data;
+using TRABAJOFINAL.Models;
 using TRABAJOFINAL.ViewModels;
 
 namespace TRABAJOFINAL.Controllers
@@ -30,9 +31,12 @@ namespace TRABAJOFINAL.Controllers
         public IActionResult Unetenos(RegistroViewModel vm)
         {
             if(ModelState.IsValid){
-                var user = new IdentityUser();
+                var user = new Usuario();
                 user.UserName=vm.Usuario;
                 user.Email=vm.Email;
+                user.direccion=vm.direccion;
+                user.telefono=vm.telefono;
+                
                 
                 var resultado = _userManager.CreateAsync(user, vm.Password);
 
