@@ -33,7 +33,20 @@ namespace TRABAJOFINAL.Controllers
           //TODO: Implement Realistic Implementation
           return View();
         }
-
+        [HttpPost]
+        public IActionResult DarAdopcion(Mascota masc)
+        {
+           if(ModelState.IsValid){
+                
+                
+                _con.Mascota.Add(masc);
+                
+                _con.SaveChanges();
+                return RedirectToAction("Index","home");
+            }
+            
         
+          return View(masc);
+        }
     }
 }
